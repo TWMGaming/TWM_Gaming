@@ -1,4 +1,118 @@
-
 {
-  "items": []
+  "checked_at": "2026-11-22T17:02:39+00:00",
+  "sources_checked": 18,
+  "items": [
+    {
+      "title": "Professor Layton and the New World of Steam - Nintendo",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNRHM1a0ZIdUhreVBzTmdFa1VWR2I1dVQ0SldtXzl6d1IyeEV6V3hVdXJhZW13UTlGNHJBV3Y3TWc1bGV3MF95SmwtYXh2VzdGV1BlZ3dHbFNjU3ZicHhvaWNRREcyMElxdlV3MFFnREJwRkhTaW5aNXh1dkZPUlVMUTEzMFQyTDdRQVNpLVYzV09XSmY2Nk1kVGNibDQ?oc=5",
+      "published": "Thu, 19 Nov 2026 05:39:59 GMT",
+      "matched_games": [
+        "瘋狂計程車：極速環遊｜Crazy Taxi: World Tour"
+      ],
+      "source_query_domain": "nintendo.com",
+      "status": "待人工核實",
+      "discovered_at": "2026-11-22T17:02:39+00:00"
+    },
+    {
+      "title": "Fantasy - Nintendo",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1IN0x0b3FFWTR1ZDJZVTIwbm00enpSbWdPS0FCaEkwRzBtM2IzZEhRZDRUeUV0a0dfTWF1dk9uZWFKYkxGSnh4QnloTXhGeVpMM0czNG1XOXk1UF9iQUNJY0ZrUl9rTDFWVU5SbEE3NzlYVjhUYUhocTFRbG9xdw?oc=5",
+      "published": "Wed, 18 Nov 2026 19:51:06 GMT",
+      "matched_games": [
+        "Final Fantasy VII 啟示（Final Fantasy VII Revelation）"
+      ],
+      "source_query_domain": "nintendo.com",
+      "status": "待人工核實",
+      "discovered_at": "2026-11-22T17:02:39+00:00"
+    },
+    {
+      "title": "Fantasy - Nintendo",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPQTJTbmNDWFdkeG5qREZ6b0Iycnl1WnNHNU1PYzZLNXJTNzRVNDM4RzI2NU5rTzJCX2NlOVREcTE1cnFQYWlfSnpKWm1nNnFoRFo5bm0zZ3duRExFd0FWUzAxWVE3WFZwaUhWZGtxemVNc0swVFI4ZFM3Q01YMEl4VEx3?oc=5",
+      "published": "Wed, 18 Nov 2026 16:21:13 GMT",
+      "matched_games": [
+        "Final Fantasy VII 啟示（Final Fantasy VII Revelation）"
+      ],
+      "source_query_domain": "nintendo.com",
+      "status": "待人工核實",
+      "discovered_at": "2026-11-22T17:02:39+00:00"
+    },
+    {
+      "title": "FINAL FANTASY TRADING CARD GAME Anniversary Collection Set 2027 English (BOX) - Square Enix Store",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPT2tYOHlfWVR0T0ZkLWhyYWZRZWdEUU9UTVZ0bTJhOXlLejZlTnFvQU5mY0xPYldhQjlOdjlkQlVMZW5RVlZRaHFRaUdRSVA3aUdQemhqNkFrbm81V3dPOFRJWnM5SGE0clZITUk0eHRVSVowZF9DSkNTbTNMZTQ3UzhDMU56Szl1X0hKT0pxY1RmYWRVYjFGYi0wQVJyTVZIcU8xYS0ySldacmNtaUt0ODdtV1BLV2M?oc=5",
+      "published": "Sat, 21 Nov 2026 18:16:07 GMT",
+      "matched_games": [
+        "Final Fantasy VII 啟示（Final Fantasy VII Revelation）"
+      ],
+      "source_query_domain": "square-enix-games.com",
+      "status": "待人工核實",
+      "discovered_at": "2026-11-22T17:02:39+00:00"
+    },
+    {
+      "title": "FINAL FANTASY XIV: Evercold Releases February 23, 2027! - Square Enix",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOYnpmZmV1UEtKZmVNdHRZS2NfR1VaTU9PN2hnUDVEcFVxbnJxNHd6UEhCdGNxRDc0SXN0bFVUSF9NcnExdzFxMmp6c3cwa1VXRVU4UmxxVjRmOUtoM2hxMUVYRjdhV1k0MjJhMVViVEYtU1g3d3o1T0dMTmhhRTNReF9jb1JjRnA3dXlUa0FQOU5QT0ZiUGc?oc=5",
+      "published": "Mon, 02 Nov 2026 19:35:38 GMT",
+      "matched_games": [
+        "Final Fantasy VII 啟示（Final Fantasy VII Revelation）"
+      ],
+      "source_query_domain": "square-enix-games.com",
+      "status": "待人工核實",
+      "discovered_at": "2026-11-22T17:02:39+00:00"
+    },
+    {
+      "title": "FINAL FANTASY XIV: Evercold Releases 23 February 2027! - Square Enix",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQcnc0dlhRaEFid05YLWQ2c2dJSUd2c1NueWxSdkJnVEZ5NHlhdWFFbURGVXcwQmJQSU5XeE1hRmlrWUx5cXZxVjMwYi1FRUYtdE1KM0JqeFVXVUQ2OTJnQTlXaFNCM2VHV0pFa005eWRLZ1pRSGxqQV9aOFJkOVd2cERWOHU2RTVSb3lhcFpnU0JqTE5XMGdDTEtZRG9vZw?oc=5",
+      "published": "Sun, 01 Nov 2026 22:10:03 GMT",
+      "matched_games": [
+        "Final Fantasy VII 啟示（Final Fantasy VII Revelation）"
+      ],
+      "source_query_domain": "square-enix-games.com",
+      "status": "待人工核實",
+      "discovered_at": "2026-11-22T17:02:39+00:00"
+    },
+    {
+      "title": "FINAL FANTASY VII REVELATION Vinyl - Square Enix Store",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9YSUxueENNWUp1N1RySTY0WkVPNzAxbnR0YXhFSzYxSXVNN2xsWWRnSVloaUtDZzIyYlhVZ0VXNjQxWG92UjFuZGNsbGxNYmRDb2o4SUdqNDR6SVM3VDljM0U0akhVVHN5akg5TEpfVHl6MjVTcXlMS1NDRlFMdw?oc=5",
+      "published": "Wed, 18 Nov 2026 23:19:19 GMT",
+      "matched_games": [
+        "Final Fantasy VII 啟示（Final Fantasy VII Revelation）"
+      ],
+      "source_query_domain": "square-enix-games.com",
+      "status": "待人工核實",
+      "discovered_at": "2026-11-22T17:02:39+00:00"
+    },
+    {
+      "title": "FINAL FANTASY RESONANCE Original Soundtrack - Square Enix Store",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNRXM0RzB5aDdQZ0dqQUxubU0wV0F6ZVZoaEtFNTI2TUNiMnpCd0xLaVFLcmwtMUVCT3dsWHpkOF9ieXVBM1d4OXBsUkVsMGhNdmI1MXVFWjFHMEZCX2tkWnpRWU9lNDROQ1I2SzdiRkptMUpyR2NLMXVjUVJvSzNjczZabjduY0FsNnc?oc=5",
+      "published": "Mon, 14 Sep 2026 23:19:01 GMT",
+      "matched_games": [
+        "Final Fantasy VII 啟示（Final Fantasy VII Revelation）"
+      ],
+      "source_query_domain": "square-enix-games.com",
+      "status": "待人工核實",
+      "discovered_at": "2026-11-22T17:02:39+00:00"
+    },
+    {
+      "title": "FINAL FANTASY VII REVELATION Vinyl - Square Enix",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE8zdmpYMVFNT2libnk1TjlOVWpQdEtsN1VRdHFwT1lFRmRicFByTHF0VldxTndDMTVobGoycDhDT1pGTmZXYm5WckY1LV85TjRQZ3QwOXdZUGpxeE1UWDI4YzhEcHVweEt3MDIwendycVQwOWVLMnNZLXpPQUNwdw?oc=5",
+      "published": "Wed, 18 Nov 2026 15:17:47 GMT",
+      "matched_games": [
+        "Final Fantasy VII 啟示（Final Fantasy VII Revelation）"
+      ],
+      "source_query_domain": "square-enix-games.com",
+      "status": "待人工核實",
+      "discovered_at": "2026-11-22T17:02:39+00:00"
+    },
+    {
+      "title": "FINAL FANTASY PIXEL REMASTER DIY Pixel Art Keychain Collection vol.3 (Each Blind Box) - Square Enix Store",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPSUxfaF9KTlNBU3JfbGFRRzhMTHIzeFl3a0JkTVRTYUtJTkFRcm1lc2ZkbGJnblpfLWJOU2JlZFZ1M2V4ZjJzVXlBYmxXZVNvVVd3VHJZTFBBektyUGY4b3h3OE1zVGtwWFVKd0RkWlBzTWIxTTJEejNucjVYUjlVYndKaU5CMWVTbjY5UWpFN1hldFpYRFdFMDFydlJjMnpvdjJSLTloeldhU1lROEpjUWs2OUlyLVJlcWxfQ0UxU3Y3QQ?oc=5",
+      "published": "Wed, 18 Nov 2026 03:47:38 GMT",
+      "matched_games": [
+        "Final Fantasy VII 啟示（Final Fantasy VII Revelation）"
+      ],
+      "source_query_domain": "square-enix-games.com",
+      "status": "待人工核實",
+      "discovered_at": "2026-11-22T17:02:39+00:00"
+    }
+  ],
+  "errors": [],
+  "policy": "候選新聞僅供人工核對，不代表已確認上市日期；本程序不修改 games.json。"
 }
