@@ -212,7 +212,7 @@ function renderAllGames(){
  document.querySelector('#allGamesSection h2').textContent=`📋 全部收錄遊戲（${rows.length} 筆）`;
 }
 // 管理員驗證：GitHub Fine-grained PAT，僅存於此分頁記憶體，不寫入 HTML、localStorage 或 Cookie。
-const REPO_OWNER='jinychang0411',REPO_NAME='TWM_Gaming',REPO_BRANCH='main',DATA_PATH='data/games.json';
+const REPO_OWNER='TWMGaming',REPO_NAME='TWM_Gaming',REPO_BRANCH='main',DATA_PATH='data/games.json';
 let adminToken='',adminSha='',adminUser='',adminBusy=false;
 function adminUI(){
  $('adminState').textContent=adminToken?'管理員：'+adminUser+'｜可編輯共用資料':'訪客模式｜僅供瀏覽';
@@ -231,7 +231,7 @@ const githubFileUrl='https://api.github.com/repos/'+REPO_OWNER+'/'+REPO_NAME+'/c
 function decodeB64UTF8(b64){const bytes=Uint8Array.from(atob(b64.replace(/\s/g,'')),c=>c.charCodeAt(0));return new TextDecoder().decode(bytes)}
 function encodeB64UTF8(str){const bytes=new TextEncoder().encode(str);let bin='';for(let i=0;i<bytes.length;i+=8192)bin+=String.fromCharCode(...bytes.subarray(i,i+8192));return btoa(bin)}
 async function adminLogin(){
- const token=prompt('請貼上 GitHub Fine-grained personal access token。\n只授權 jinychang0411/TWM_Gaming 的 Contents: Read and write。\nToken 只保留於此分頁記憶體；關閉或重新整理後需重新登入。');
+ const token=prompt('請貼上 GitHub Fine-grained personal access token。\n只授權 TWMGaming/TWM_Gaming 的 Contents: Read and write。\nToken 只保留於此分頁記憶體；關閉或重新整理後需重新登入。');
  if(!token)return;
  adminToken=token.trim();$('adminMessage').textContent='驗證中…';
  try{
