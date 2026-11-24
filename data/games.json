@@ -553,11 +553,14 @@
       "company": "Nintendo",
       "platform": "Nintendo Switch 2",
       "type": "上市",
-      "status": "使用者清單／上市日期與平台待逐項複核",
+      "status": "官方公告",
       "note": "寶可夢新世代；與《寶可夢 風》為雙版本，檔期分析視為同一組作品",
       "description": "來源：使用者提供 Excel 第 53 列。原類型：上市。原分類：Nintendo。",
       "url": "https://asia-press.portal-pokemon.com/press-release/announcing-two-all-new-entries-in-the-pokemon-series-pokemon-winds-and-pokemon-waves_20260227/",
-      "releaseYear": "2027"
+      "releaseYear": "2027",
+      "quarter": "2026-Q4",
+      "season": "",
+      "published": ""
     },
     {
       "id": "xlsx-20261120-54",
