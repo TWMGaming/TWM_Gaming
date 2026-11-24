@@ -269,19 +269,24 @@ async function commitMutation(mutate,description){
  finally{adminBusy=false;$('localNotice').hidden=true}
 }
 async function bootstrap(){
+ adminUI();
+ $('adminLogin').disabled=true;
  try{
-  const res=await fetch('https://raw.githubusercontent.com/'+REPO_OWNER+'/'+REPO_NAME+'/'+REPO_BRANCH+'/'+DATA_PATH+'?t='+Date.now(),{cache:'no-store'});
-  if(!res.ok)throw Error('HTTP '+res.status);
-  const d=await res.json();
+  const res=await fetch(githubFileUrl+'?ref='+encodeURIComponent(REPO_BRANCH)+'&t='+Date.now(),{cache:'no-store',headers:{'Accept':'application/vnd.github+json'}});
+  if(!res.ok)throw Error('GitHub API HTTP '+res.status);
+  const f=await res.json();
+  const d=JSON.parse(decodeB64UTF8(f.content));
+  $('adminMessage').textContent='共用資料已從 GitHub API 載入（同步版 V3）';
   if(!Array.isArray(d.events)||!Array.isArray(d.watch))throw Error('資料格式不正確');
   events=d.events;watch=d.watch;
   document.getElementById('syncStatus').textContent='最後更新：讀取中…';
  }catch(err){
-  document.getElementById('syncStatus').textContent='無法載入共用 JSON：'+err.message+'。請使用 GitHub Pages 網址瀏覽，不要直接雙擊本機 HTML。';
+  $('adminMessage').textContent='最新共用資料載入失敗：'+err.message+'。請稍後重新載入。';
   events=[];watch=[];
  }
  adminUI();setMode();render();renderAllGames();
  const saved=sessionToken();if(saved)await adminLogin(saved);
+ $('adminLogin').disabled=false;
  try{
   const r=await fetch('./data/review_queue.json',{cache:'no-store'});const q=await r.json();
   const stamp=q.checked_at;
@@ -294,4 +299,3 @@ async function bootstrap(){
 
 bootstrap();
 </script></body></html>
-
