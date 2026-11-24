@@ -195,7 +195,7 @@ function releaseOnlyAudit(){
   for(const w of watch){if(/Crazy Taxi|Virtua Fighter Crossroads/i.test(w.name||'')){w.releaseYear='2027';w.status='SEGA 官方發售表確認年份';w.url='https://www.segasammy.co.jp/cms/wp-content/uploads/pdf/en/ir/20261106_q2_presentation_e.pdf'}}
   save();
 }
-$('prev').onclick=()=>{view=new Date(view.getFullYear(),view.getMonth()-1,1);render()};$('next').onclick=()=>{view=new Date(view.getFullYear(),view.getMonth()+1,1);render()};$('toggleYear').onclick=()=>{yearMode=!yearMode;setMode()};$('theme').onclick=()=>document.body.classList.toggle('dark');$('add').onclick=()=>{if(requireAdmin())openEdit(null,false)};$('addWatch').onclick=()=>{if(requireAdmin())openEdit(null,true)};$('close').onclick=closeModal;$('overlay').onclick=e=>{if(e.target===$('overlay'))closeModal()};document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});['company','platform','type','search'].forEach(id=>$(id).addEventListener(id==='search'?'input':'change',render));$('exportJSON').onclick=()=>download('全球單機遊戲情報_備份.json',JSON.stringify({version:4,exported:new Date().toISOString(),events,watch},null,2),'application/json');$('exportCSV').onclick=csv;$('importJSON').onclick=()=>$('file').click();$('file').onchange=async ev=>{let file=ev.target.files[0];if(!file)return;try{let d=JSON.parse(await file.text());if(!Array.isArray(d.events)||!Array.isArray(d.watch)||d.events.some(x=>!x.name||!x.date)||d.watch.some(x=>!x.name))throw Error('JSON 必須包含 events（每筆有名稱與日期）及 watch（每筆有名稱）陣列');if(!confirm('匯入將覆蓋目前全部情報。建議先匯出 JSON 備份。確定匯入 '+d.events.length+' 筆定日情報與 '+d.watch.length+' 筆待追蹤情報？'))return;if(!requireAdmin())return;const ok=await commitMutation(()=>{events=d.events.map(x=>({...x,id:x.id||uid()}));watch=d.watch.map(x=>({...x,id:x.id||uid()}))},'匯入遊戲日曆資料');if(ok){render();alert('已提交 GitHub，公開網站部署後會同步更新')}}catch(e){alert('匯入失敗：'+e.message)}finally{ev.target.value=''}};$('reset').onclick=()=>location.reload();$('adminLogin').onclick=adminLogin;$('adminLogout').onclick=adminLogout;bootstrap();
+$('prev').onclick=()=>{view=new Date(view.getFullYear(),view.getMonth()-1,1);render()};$('next').onclick=()=>{view=new Date(view.getFullYear(),view.getMonth()+1,1);render()};$('toggleYear').onclick=()=>{yearMode=!yearMode;setMode()};$('theme').onclick=()=>document.body.classList.toggle('dark');$('add').onclick=()=>{if(requireAdmin())openEdit(null,false)};$('addWatch').onclick=()=>{if(requireAdmin())openEdit(null,true)};$('close').onclick=closeModal;$('overlay').onclick=e=>{if(e.target===$('overlay'))closeModal()};document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});['company','platform','type','search'].forEach(id=>$(id).addEventListener(id==='search'?'input':'change',render));$('exportJSON').onclick=()=>download('全球單機遊戲情報_備份.json',JSON.stringify({version:4,exported:new Date().toISOString(),events,watch},null,2),'application/json');$('exportCSV').onclick=csv;$('importJSON').onclick=()=>$('file').click();$('file').onchange=async ev=>{let file=ev.target.files[0];if(!file)return;try{let d=JSON.parse(await file.text());if(!Array.isArray(d.events)||!Array.isArray(d.watch)||d.events.some(x=>!x.name||!x.date)||d.watch.some(x=>!x.name))throw Error('JSON 必須包含 events（每筆有名稱與日期）及 watch（每筆有名稱）陣列');if(!confirm('匯入將覆蓋目前全部情報。建議先匯出 JSON 備份。確定匯入 '+d.events.length+' 筆定日情報與 '+d.watch.length+' 筆待追蹤情報？'))return;if(!requireAdmin())return;const ok=await commitMutation(()=>{events=d.events.map(x=>({...x,id:x.id||uid()}));watch=d.watch.map(x=>({...x,id:x.id||uid()}))},'匯入遊戲日曆資料');if(ok){render();alert('已提交 GitHub，訪客重新整理即可重新查詢')}}catch(e){alert('匯入失敗：'+e.message)}finally{ev.target.value=''}};$('reset').onclick=()=>location.reload();$('adminLogin').onclick=()=>adminLogin();$('adminLogout').onclick=adminLogout;
 
 function renderAllGames(){
  const body=document.getElementById('allGamesBody'); if(!body)return;
@@ -211,9 +211,12 @@ function renderAllGames(){
  document.querySelector('#allGamesSection summary').textContent=`📋 展開完整資料核對表（${rows.length} 筆）`;
  document.querySelector('#allGamesSection h2').textContent=`📋 全部收錄遊戲（${rows.length} 筆）`;
 }
-// 管理員驗證：GitHub Fine-grained PAT，僅存於此分頁記憶體，不寫入 HTML、localStorage 或 Cookie。
+// 管理員驗證：限權 PAT 暫存 sessionStorage，登出清除；不寫入 HTML 或 localStorage。
 const REPO_OWNER='TWMGaming',REPO_NAME='TWM_Gaming',REPO_BRANCH='main',DATA_PATH='data/games.json';
 let adminToken='',adminSha='',adminUser='',adminBusy=false;
+const SESSION_KEY='twm-calendar-admin-session-v2';
+function sessionToken(){try{return sessionStorage.getItem(SESSION_KEY)||''}catch{return ''}}
+function storeToken(t){try{if(t)sessionStorage.setItem(SESSION_KEY,t);else sessionStorage.removeItem(SESSION_KEY)}catch{}}
 function adminUI(){
  $('adminState').textContent=adminToken?'管理員：'+adminUser+'｜可編輯共用資料':'訪客模式｜僅供瀏覽';
  $('adminLogin').hidden=!!adminToken;$('adminLogout').hidden=!adminToken;
@@ -230,10 +233,11 @@ async function apiRequest(url,opts={}){
 const githubFileUrl='https://api.github.com/repos/'+REPO_OWNER+'/'+REPO_NAME+'/contents/'+DATA_PATH;
 function decodeB64UTF8(b64){const bytes=Uint8Array.from(atob(b64.replace(/\s/g,'')),c=>c.charCodeAt(0));return new TextDecoder().decode(bytes)}
 function encodeB64UTF8(str){const bytes=new TextEncoder().encode(str);let bin='';for(let i=0;i<bytes.length;i+=8192)bin+=String.fromCharCode(...bytes.subarray(i,i+8192));return btoa(bin)}
-async function adminLogin(){
- const token=prompt('請貼上 GitHub Fine-grained personal access token。\n只授權 TWMGaming/TWM_Gaming 的 Contents: Read and write。\nToken 只保留於此分頁記憶體；關閉或重新整理後需重新登入。');
- if(!token)return;
- adminToken=token.trim();$('adminMessage').textContent='驗證中…';
+async function adminLogin(restoredToken=''){
+  if(adminBusy)return false;
+  const token=typeof restoredToken==='string'&&restoredToken?restoredToken:prompt('請貼上 GitHub Fine-grained personal access token。\n只授權 TWMGaming/TWM_Gaming 的 Contents: Read and write。\nToken 暫存於此分頁工作階段；重新整理可保留登入，登出時清除。請勿在共用電腦使用。');
+ if(!token)return false;
+  adminBusy=true;adminToken=token.trim();$('adminMessage').textContent='驗證中…';
  try{
   const me=await apiRequest('https://api.github.com/user');
   if(String(me.login).toLowerCase()!==REPO_OWNER.toLowerCase())throw Error('登入帳號不是指定管理員 '+REPO_OWNER);
@@ -241,11 +245,11 @@ async function adminLogin(){
   if(f.type!=='file'||!f.sha)throw Error('無法取得共用資料的版本');
   const d=JSON.parse(decodeB64UTF8(f.content));
   if(!Array.isArray(d.events)||!Array.isArray(d.watch))throw Error('games.json 資料格式錯誤');
-  adminSha=f.sha;adminUser=me.login;events=d.events;watch=d.watch;
-  $('adminMessage').textContent='登入成功。修改後會直接提交 GitHub。';adminUI();render();renderAllGames();
- }catch(e){adminToken='';adminSha='';adminUser='';adminUI();$('adminMessage').textContent='登入失敗：'+e.message}
+  adminSha=f.sha;adminUser=me.login;events=d.events;watch=d.watch;storeToken(adminToken);
+  $('adminMessage').textContent='登入成功。修改後會直接提交 GitHub。';adminUI();render();renderAllGames();return true;
+  }catch(e){storeToken('');adminToken='';adminSha='';adminUser='';adminUI();$('adminMessage').textContent='登入失敗：'+e.message;return false}finally{adminBusy=false}
 }
-function adminLogout(){adminToken='';adminSha='';adminUser='';adminUI();$('adminMessage').textContent='已登出';location.reload()}
+function adminLogout(){if(adminBusy)return;storeToken('');adminToken='';adminSha='';adminUser='';adminUI();$('adminMessage').textContent='已登出';location.reload()}
 async function commitMutation(mutate,description){
  if(!requireAdmin()||adminBusy)return false;
  adminBusy=true;const beforeEvents=structuredClone(events),beforeWatch=structuredClone(watch);
@@ -260,13 +264,13 @@ async function commitMutation(mutate,description){
   const next={...existing,events,watch};
   const result=await apiRequest(githubFileUrl,{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:'calendar: '+description,content:encodeB64UTF8(JSON.stringify(next,null,2)+'\n'),sha:adminSha,branch:REPO_BRANCH})});
   adminSha=result.content.sha;
-  $('adminMessage').textContent='已成功提交 GitHub。網站通常需要稍等部署後才會顯示。';renderAllGames();return true;
+  $('adminMessage').textContent='已成功提交 GitHub。最新資料已寫入 GitHub；訪客重新整理即可重新查詢。';renderAllGames();return true;
  }catch(e){events=beforeEvents;watch=beforeWatch;$('adminMessage').textContent='儲存失敗：'+e.message;alert('儲存失敗，未更動共用資料：\n'+e.message);return false}
  finally{adminBusy=false;$('localNotice').hidden=true}
 }
 async function bootstrap(){
  try{
-  const res=await fetch('./data/games.json',{cache:'no-store'});
+  const res=await fetch('https://raw.githubusercontent.com/'+REPO_OWNER+'/'+REPO_NAME+'/'+REPO_BRANCH+'/'+DATA_PATH+'?t='+Date.now(),{cache:'no-store'});
   if(!res.ok)throw Error('HTTP '+res.status);
   const d=await res.json();
   if(!Array.isArray(d.events)||!Array.isArray(d.watch))throw Error('資料格式不正確');
@@ -277,6 +281,7 @@ async function bootstrap(){
   events=[];watch=[];
  }
  adminUI();setMode();render();renderAllGames();
+ const saved=sessionToken();if(saved)await adminLogin(saved);
  try{
   const r=await fetch('./data/review_queue.json',{cache:'no-store'});const q=await r.json();
   const stamp=q.checked_at;
@@ -286,4 +291,7 @@ async function bootstrap(){
   document.getElementById('syncStatus').textContent='🕘 最後更新：'+taipei+(valid?'（台灣時間）':'');
  }catch(e){document.getElementById('syncStatus').textContent='🕘 最後更新：暫時無法取得';}
 }
+
+bootstrap();
 </script></body></html>
+
