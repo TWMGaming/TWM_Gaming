@@ -1,7 +1,18 @@
 {
-  "checked_at": "2026-11-25T02:17:22+00:00",
-  "sources_checked": 18,
+  "checked_at": "2026-11-26T02:16:20+00:00",
+  "sources_checked": 17,
   "items": [
+    {
+      "title": "MARIO KART WORLD FALL CUP 2026 OFFICIAL RULES - Nintendo",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPclBJcTJIdzVqeTVIVkVya1kyd1YzaE9QUTRtcjJoX0p4bHhZbEdBQnF5WmxlczczN0ZsYkNBLTZnQ19UUGVrdWcxOGFZeTlqNVNFNF8zdW5jWl9WTldBSVpZMTk2LTFzLS1BemJyTDh1dVVQT0JvcE5oX1hfYTlFMVRBdmtmY3ZaTWNJc0NEcnJUak9i?oc=5",
+      "published": "Sat, 21 Nov 2026 05:18:04 GMT",
+      "matched_games": [
+        "瘋狂計程車：極速環遊｜Crazy Taxi: World Tour"
+      ],
+      "source_query_domain": "nintendo.com",
+      "status": "待人工核實",
+      "discovered_at": "2026-11-26T02:16:20+00:00"
+    },
     {
       "title": "Urban Tracks - FINAL FANTASY Series City Pop Arrangement Album - Square Enix Store (EU)",
       "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNY1FxU08xUUhmdzZkRUZzZFUwTDR0NG83N21vOFF2ZnI2NW9fZTc1NXVsSU1jWk81RU9DRlJmUGIxOFhfckQtbEtKYVlNY04wQlRXYXhzTHhGeHFPbU1KRlpWUjZHTHUxeVYwUGRYaE1sdlFpRThGTTQ0T0RTTngwX3RBTnEyZTRCRG5HWWQ4R2JsNEdnSVJ4YVJkTGVLY3NoVWVJ?oc=5",
@@ -179,6 +190,12 @@
       "discovered_at": "2026-11-22T17:02:39+00:00"
     }
   ],
-  "errors": [],
+  "errors": [
+    {
+      "source": "news.xbox.com",
+      "query": "game delayed",
+      "error": "HTTP Error 429: Too Many Requests"
+    }
+  ],
   "policy": "候選新聞僅供人工核對，不代表已確認上市日期；本程序不修改 games.json。"
 }
