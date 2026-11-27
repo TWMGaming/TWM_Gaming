@@ -1,7 +1,62 @@
 {
-  "checked_at": "2026-11-26T02:16:20+00:00",
-  "sources_checked": 17,
+  "checked_at": "2026-11-27T02:18:05+00:00",
+  "sources_checked": 18,
   "items": [
+    {
+      "title": "FINAL FANTASY VII REVELATION Premium Edition - Nintendo",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE0ySWJFaFNiYkhxVGFpdDNHeFpPX08tekwtYW5Zb3g5QmFqczNyd1dmM1ZVQ3U2U3VKLW9vWDdwQ2pWdWRNamN5V1JnZ1lLaFlIQUg1dERXM0ROZlFzUmdldW1uZXN6SUpMd0l3U0pwenk?oc=5",
+      "published": "Tue, 15 Sep 2026 20:52:30 GMT",
+      "matched_games": [
+        "Final Fantasy VII 啟示（Final Fantasy VII Revelation）"
+      ],
+      "source_query_domain": "nintendo.com",
+      "status": "待人工核實",
+      "discovered_at": "2026-11-27T02:18:05+00:00"
+    },
+    {
+      "title": "Professor Layton and the New World of Steam - Nintendo",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNQnNZYzFydXRIRjdJNEdnU2N3WWkxSjZzSFJadkRFbXNnV2hLS0NmUm9jbm9TbkdYYzdhOXRHeE9NTERnZHJRekJ2aFF2QnhpOEE3c05yNG10dk1zQ1FzZjhCdEx6cW1TUWtINXJCbDA2ZWZqUFlrc0s5LW45Wlk5UjZZRjd4VXdSS0luLUh1SHdBZVlZanZ2cHgxZmkwZk1U?oc=5",
+      "published": "Thu, 19 Nov 2026 22:08:15 GMT",
+      "matched_games": [
+        "瘋狂計程車：極速環遊｜Crazy Taxi: World Tour"
+      ],
+      "source_query_domain": "nintendo.com",
+      "status": "待人工核實",
+      "discovered_at": "2026-11-27T02:18:05+00:00"
+    },
+    {
+      "title": "Brain Training Jigsaw Puzzle World Scenery - Nintendo",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPeEpSTEJrM0piWDF5cVhJREpoZDg3Q1c3ODRFZjN5MndMVkFJbEU2UG1sQXB1RkZHNGFmUmhTVkNQd3EySG9aTjhQM1hYblJjRGZvQjZtRnB3OTlpeExvVHVXZ1JLMHNHb1k0eWFUdmZCZVhXb1Q4THEzVk9FekM1bFdMTE1SYW1vQmItcnV0T1lVUTRoMHVJRg?oc=5",
+      "published": "Sat, 21 Nov 2026 07:06:18 GMT",
+      "matched_games": [
+        "瘋狂計程車：極速環遊｜Crazy Taxi: World Tour"
+      ],
+      "source_query_domain": "nintendo.com",
+      "status": "待人工核實",
+      "discovered_at": "2026-11-27T02:18:05+00:00"
+    },
+    {
+      "title": "Final Kick Football Legends - Nintendo",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNbUMwaVB6SHBXbnloQXhrVVJma3BCTjJJQklCSXF3Y080dUpPZ2NnNXV0U1lhWDdBbng5MFhfMV81MDJqNm1wNkRVQ3VVa3ZKOExrNXFTOWlZb0ZWSXUxQU90SW8yRHRYWnZvZjB2NEVhdHVFLUdlYWxlTUM5b19aY3JCeFA?oc=5",
+      "published": "Sat, 21 Nov 2026 07:06:14 GMT",
+      "matched_games": [
+        "Final Fantasy VII 啟示（Final Fantasy VII Revelation）"
+      ],
+      "source_query_domain": "nintendo.com",
+      "status": "待人工核實",
+      "discovered_at": "2026-11-27T02:18:05+00:00"
+    },
+    {
+      "title": "FINAL FANTASY XIV: Evercold Releases 23 February 2027! - Square Enix",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPdmtpYUtTdjJsRkF5aGE0ajNubDhBOTNqVTdPOWo5cWlIZEJuSkxmblB0b3ZGY2Y3T2xleFlRZEFkSC1rdTcxdmVGNXgwNURfdEpDZHNnWmx5WU4tMDV4b2RRV294ekxkOFpndUl3TXFPbVZFOWZvalZrS0kyUlFqSklsT1pSdlpFTEUwSFVnZjZKY2YzcmNCb0l3T01ldw?oc=5",
+      "published": "Sun, 01 Nov 2026 22:10:06 GMT",
+      "matched_games": [
+        "Final Fantasy VII 啟示（Final Fantasy VII Revelation）"
+      ],
+      "source_query_domain": "square-enix-games.com",
+      "status": "待人工核實",
+      "discovered_at": "2026-11-27T02:18:05+00:00"
+    },
     {
       "title": "MARIO KART WORLD FALL CUP 2026 OFFICIAL RULES - Nintendo",
       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPclBJcTJIdzVqeTVIVkVya1kyd1YzaE9QUTRtcjJoX0p4bHhZbEdBQnF5WmxlczczN0ZsYkNBLTZnQ19UUGVrdWcxOGFZeTlqNVNFNF8zdW5jWl9WTldBSVpZMTk2LTFzLS1BemJyTDh1dVVQT0JvcE5oX1hfYTlFMVRBdmtmY3ZaTWNJc0NEcnJUak9i?oc=5",
@@ -190,12 +245,6 @@
       "discovered_at": "2026-11-22T17:02:39+00:00"
     }
   ],
-  "errors": [
-    {
-      "source": "news.xbox.com",
-      "query": "game delayed",
-      "error": "HTTP Error 429: Too Many Requests"
-    }
-  ],
+  "errors": [],
   "policy": "候選新聞僅供人工核對，不代表已確認上市日期；本程序不修改 games.json。"
 }
