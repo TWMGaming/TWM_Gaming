@@ -1,7 +1,18 @@
 {
-  "checked_at": "2026-11-27T02:18:05+00:00",
+  "checked_at": "2026-11-28T02:13:43+00:00",
   "sources_checked": 18,
   "items": [
+    {
+      "title": "Croc's World Construction Kit 3 - Nintendo",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxONjRDVGNmM2NyUGtJSUJPX0VJak12SEZwenUyRlVlWGdTUDRoS0xwSjk4dFAxMHpxUmNDM0hQVk9hV2k4eWJ1SDJ6WHJrNklnSHpqYUdMX3NjcjFqSkp5d2dQUW90cjlLM1B3d2lTVlg0ZWc1WWZycHRhS01lWFRteko3aFA5dTBTVnFyYw?oc=5",
+      "published": "Fri, 27 Nov 2026 12:50:19 GMT",
+      "matched_games": [
+        "瘋狂計程車：極速環遊｜Crazy Taxi: World Tour"
+      ],
+      "source_query_domain": "nintendo.com",
+      "status": "待人工核實",
+      "discovered_at": "2026-11-28T02:13:43+00:00"
+    },
     {
       "title": "FINAL FANTASY VII REVELATION Premium Edition - Nintendo",
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE0ySWJFaFNiYkhxVGFpdDNHeFpPX08tekwtYW5Zb3g5QmFqczNyd1dmM1ZVQ3U2U3VKLW9vWDdwQ2pWdWRNamN5V1JnZ1lLaFlIQUg1dERXM0ROZlFzUmdldW1uZXN6SUpMd0l3U0pwenk?oc=5",
